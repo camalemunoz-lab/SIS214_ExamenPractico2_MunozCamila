@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cursos y Certificaciones - Curriculum Vitae de Camila Muñoz">
+    <meta name="author" content="Camila Muñoz">
+    <title>Cursos y Certificaciones - Camila Muñoz</title>
+    
+    <!-- Importación del archivo de estilos unificado del proyecto -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Script diferido para la funcionalidad de conmutación de tema claro/oscuro -->
+    <script src="jss/main.js" defer></script>
+</head>
+
+<body>    
+    <!-- Enlace de accesibilidad para omitir el menú y saltar directo al contenido principal -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+    <!-- Menú de navegación principal con control de página activa -->
+    <nav aria-label="Navegación principal" class="main-nav">
+        <div class="nav-container">
+            <!-- Botón Hamburguesa para desplegar el menú en dispositivos móviles -->
+            <button class="hamburger-btn" id="hamburger-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Abrir menú de navegación">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            
+            <!-- Lista de enlaces vinculada al Script y CSS -->
+            <ul id="primary-navigation" class="nav-menu">
+                <li><a href="index.html" class="active" aria-current="page">Inicio</a></li>
+                <li><a href="acerca_de_mi.html">Acerca de mí</a></li>
+                <li><a href="perfil_profesional.html">Perfil profesional</a></li>
+                <li><a href="formacion_academica.html">Formación Académica</a></li>
+                <li><a href="experiencia_profesional.html">Experiencia profesional</a></li>
+                <li><a href="habilidades.html">Habilidades</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="idiomas.html">Idiomas</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="portafolio.html">Portafolio</a></li> 
+                <li><a href="formulario.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Encabezado general del sitio -->
+    <header role="banner" class="main-header">
+        <!-- Controles de cabecera: Botón para alternar entre modo claro y modo oscuro -->
+        <div class="header-tools">
+            <button id="theme-toggle" class="btn" type="button" aria-label="Cambiar a modo oscuro" aria-pressed="false">
+                <span id="theme-icon" aria-hidden="true">🌙</span>
+                <span id="theme-text">Modo Oscuro</span>
+            </button>
+        </div>
+
+        <!-- Tarjeta de perfil con foto, título profesional y datos de contacto -->
+        <div class="profile-container">
+            <img src="assets/images/foto1.jpeg" alt="Fotografía personal de Camila Alejandra Muñoz Mamani" class="profile-img">
+        
+            <div class="profile-info">
+                <p class="doc-subtitle">CURRICULUM VITAE</p>
+                <h1 class="profile-name">Camila Alejandra Muñoz Mamani</h1>
+                <p class="job-title">Ingeniera de Sistemas</p>
+            
+                <!-- Bloque de dirección semántico (<address>) con información de contacto -->
+                <address class="contact-info">
+                    <ul class="contact-list">
+                        <li class="contact-item">
+                            <span class="icon" aria-hidden="true">📍</span> La Paz, Bolivia
+                        </li>
+                        <li class="contact-item">
+                            <span class="icon" aria-hidden="true">✉️</span> 
+                            <a href="mailto:camalemunoz@email.com">camalemunoz@email.com</a>
+                        </li>
+                        <li class="contact-item">
+                            <span class="icon" aria-hidden="true">📞</span> 
+                            <a href="tel:+59170179749">+591 70179749</a>
+                        </li>
+                    </ul>
+                </address>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido principal enfocado en la trayectoria académica complementaria (<main>) -->
+    <main id="main-content" role="main">
+        <section id="cursos" class="reveal" aria-labelledby="cursos-heading">
+            <div class="section-header">
+                <h2 id="cursos-heading" class="card-title" style="font-size: 1.8rem; margin-bottom: 24px;">CERTIFICACIONES Y CURSOS</h2>
+            </div>
+
+            <!-- Estructura en cuadrícula (Grid) para organizar las categorías en tarjetas responsivas -->
+            <div class="cards-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+
+                <!-- Tarjeta 1: Bloque de Certificaciones Oficiales -->
+                <article class="card">
+                    <div class="card-header" style="display: flex; align-items: center; gap: 12px; margin-bottom: 18px;">
+                        <div class="icon-box" aria-hidden="true">🎓</div>
+                        <h3 class="card-title" style="margin: 0;">Certificaciones</h3>
+                    </div>
+                    
+                    <div class="card-body" style="display: flex; flex-direction: column; gap: 12px;">
+                        <div>
+                            <strong style="color: var(--text-color); font-size: 1.05rem; display: block;">Certificación en Idioma Inglés</strong>
+                            <span style="color: var(--accent-color); font-weight: 600;">Centro Americano Boliviano (CBA)</span>
+                        </div>
+                        <div class="badge-date">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-right: 6px;"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                            <time datetime="2024-02">Febrero 2024</time>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 2: Bloque de Cursos de Formación Complementaria -->
+                <article class="card">
+                    <div class="card-header" style="display: flex; align-items: center; gap: 12px; margin-bottom: 18px;">
+                        <div class="icon-box" aria-hidden="true">📚</div>
+                        <h3 class="card-title" style="margin: 0;">Cursos Especializados</h3>
+                    </div>
+                    
+                    <div class="card-body" style="display: flex; flex-direction: column; gap: 20px;">
+                        <!-- Curso 1: STEAM -->
+                        <div>
+                            <strong style="color: var(--text-color); font-size: 1.05rem; display: block; margin-bottom: 4px;">Curso Interdisciplinario de Educación STEAM</strong>
+                            <div class="badge-date">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-right: 6px;"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                                <time datetime="2024-08">Agosto 2024</time>
+                            </div>
+                        </div>
+
+                        <!-- Curso 2: Chino Mandarín -->
+                        <div style="border-top: 1px dashed var(--border-color); padding-top: 14px;">
+                            <strong style="color: var(--text-color); font-size: 1.05rem; display: block; margin-bottom: 4px;">Curso de Fundamentos del Idioma Chino Mandarín</strong>
+                            <div class="badge-date">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-right: 6px;"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                                <time datetime="2022-02">Febrero 2022</time>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 3: Bloque de Talleres Prácticos y Hardware -->
+                <article class="card">
+                    <div class="card-header" style="display: flex; align-items: center; gap: 12px; margin-bottom: 18px;">
+                        <div class="icon-box" aria-hidden="true">🛠️</div>
+                        <h3 class="card-title" style="margin: 0;">Talleres Prácticos</h3>
+                    </div>
+                    
+                    <div class="card-body" style="display: flex; flex-direction: column; gap: 12px;">
+                        <div>
+                            <strong style="color: var(--text-color); font-size: 1.05rem; display: block;">Taller Práctico de Programación de Arduino y Sensores</strong>
+                        </div>
+                        <div class="badge-date">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-right: 6px;"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                            <time datetime="2025-06">Junio 2025</time>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página general del sitio (<footer>) con metadatos de autoría y actualización -->
+    <footer role="contentinfo">
+        <p><small>&copy; Camila Alejandra Muñoz Mamani. Todos los derechos reservados.</small></p>
+        <p><small>Desarrollado con HTML5 Semántico, CSS3 Modular y JS totalmente documentado.</small></p>
+        <p><small>Fecha de última actualización: <time datetime="2026-09-12">12 de Septiembre de 2026</time></small></p>
+    </footer>
+</body>
+</html>

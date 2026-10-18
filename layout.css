@@ -1,0 +1,337 @@
+
+/* ==========================================================================
+   1. NAVEGACIÓN PRINCIPAL (.main-nav)
+   ========================================================================== */
+
+/* Contenedor principal de la barra fija superior */
+.main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--card-bg);
+    box-shadow: var(--shadow-card);
+    backdrop-filter: blur(8px);
+    transition: background-color 0.3s ease;
+}
+
+/* Lista de enlaces de navegación */
+.main-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 12px;
+    gap: 8px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Enlaces individuales de la barra */
+.main-nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: var(--font-size-label);
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: var(--radius-item);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Estado :hover de los enlaces */
+.main-nav a:hover {
+    background-color: var(--card-hover-bg);
+    color: var(--accent-color);
+    transform: translateY(-1px);
+}
+
+/* Estado activo del enlace (Tema Claro) */
+.main-nav a.active {
+    background-color: var(--accent-color) !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(126, 34, 206, 0.3);
+}
+
+/* Estado activo del enlace (Tema Oscuro) */
+[data-theme="dark"] .main-nav a.active {
+    background-color: var(--accent-color) !important; /* Típicamente un tono pastel en dark mode */
+    color: #121017 !important;                         /* Texto oscuro para garantizar contraste */
+    box-shadow: 0 4px 12px rgba(162, 227, 225, 0.2);
+}
+
+
+/* ==========================================================================
+   2. HEADER Y COMPONENTES SUPERIORES
+   ========================================================================== */
+
+/* Compensación de espacio para evitar que el nav fijo tape el contenido */
+.main-header {
+    padding-top: 90px; 
+}
+
+/* Botón de cambio de tema dentro del encabezado */
+.main-header .theme-btn {
+    align-self: flex-end;
+    margin-bottom: 15px;
+}
+
+/* Contenedor de citas o frases destacadas */
+.quote-container {
+    margin-top: 20px;
+    max-width: 600px;
+}
+
+
+/* ==========================================================================
+   3. DISPOSICIÓN DE CONTENIDOS Y GRIDS (DESKTOP)
+   ========================================================================== */
+
+/* Grids adaptativos generales */
+.info-grid,
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+    margin-top: 15px;
+}
+
+/* Layouts en columna (Flexbox) */
+.education-grid,
+.experience-grid,
+.skills-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.education-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Encabezado de items de experiencia */
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    border-bottom: 1px dashed var(--border-color);
+    padding-bottom: 14px;
+    margin-bottom: 16px;
+}
+
+/* Contenedor flexible de habilidades (desplegables) */
+.skills-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.skills-flex details {
+    flex: 1;
+    min-width: 200px;
+}
+
+.details-body {
+    padding: 0 24px 20px 24px;
+    border-top: 1px dashed var(--border-color);
+}
+
+
+/* ==========================================================================
+   4. TARJETAS Y TARJETAS DE PROYECTOS
+   ========================================================================== */
+
+.project-card,
+.portfolio-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card {
+    justify-content: space-between;
+}
+
+/* Tarjeta de portafolio que ocupa dos columnas en pantallas grandes */
+.portfolio-card.full-width-media {
+    grid-column: span 2;
+}
+
+.portfolio-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.project-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: auto;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.media-container {
+    margin: auto 0 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+/* ==========================================================================
+   5. FORMULARIOS Y DIÁLOGOS
+   ========================================================================== */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-top: 6px;
+}
+
+.form-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.dialog-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+}
+
+
+/* ==========================================================================
+   6. MEDIA QUERIES (RESPONSIVE DESIGN)
+   ========================================================================== */
+
+/* --- Pantallas Medianas / Tablets (hasta 1024px) --- */
+@media (max-width: 1024px) {
+    .main-nav ul {
+        gap: 6px;
+        padding: 10px;
+    }
+
+    .main-nav a {
+        font-size: 0.7rem;
+        padding: 6px 10px;
+    }
+}
+
+/* --- Dispositivos Móviles (hasta 768px) --- */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    /* Navegación horizontal desplazable en móvil */
+    .main-nav ul {
+        justify-content: flex-start;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding: 10px 15px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Ocultar barra de scroll en la navegación móvil */
+    .main-nav ul::-webkit-scrollbar {
+        display: none;
+    }
+
+    .main-nav li {
+        flex-shrink: 0;
+    }
+
+    /* Layouts en columna única para móvil */
+    .skills-flex {
+        flex-direction: column;
+    }
+
+    .portfolio-grid,
+    .projects-grid,
+    .profile-grid,
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-card.full-width-media {
+        grid-column: span 1;
+    }
+
+    .profile-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.2rem;
+        padding: 1.5rem;
+    }
+
+    .header-tools {
+        justify-content: center;
+    }
+
+    .experience-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+
+/* --- Pantallas muy pequeñas / Móviles en vertical (hasta 500px) --- */
+@media (max-width: 500px) {
+    .education-card {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .project-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .project-link {
+        width: 100%;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Acerca de mí - Curriculum Vitae de Camila Muñoz">
+    <meta name="author" content="Camila Muñoz">
+    <title>Acerca de mí - Camila Muñoz</title>
+    
+    <!-- Vinculación del archivo CSS principal que centraliza la importación modular de estilos -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Carga diferida del script de JavaScript para manejar la interactividad y la conmutación de temas -->
+    <script src="jss/main.js" defer></script>
+</head>
+
+<body>    
+    <!-- Enlace de accesibilidad directo al contenido para evitar la navegación repetitiva en lectores de pantalla -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+    <!-- Barra de navegación principal que conecta con las distintas secciones de la hoja de vida -->
+    <nav aria-label="Navegación principal" class="main-nav">
+        <div class="nav-container">
+            <!-- Botón Hamburguesa para desplegar el menú en dispositivos móviles -->
+            <button class="hamburger-btn" id="hamburger-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Abrir menú de navegación">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            
+            <!-- Lista de enlaces de navegación vinculada al Script y CSS -->
+            <ul id="primary-navigation" class="nav-menu">
+                <li><a href="index.html" class="active" aria-current="page">Inicio</a></li>
+                <li><a href="acerca_de_mi.html">Acerca de mí</a></li>
+                <li><a href="perfil_profesional.html">Perfil profesional</a></li>
+                <li><a href="formacion_academica.html">Formación Académica</a></li>
+                <li><a href="experiencia_profesional.html">Experiencia profesional</a></li>
+                <li><a href="habilidades.html">Habilidades</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="idiomas.html">Idiomas</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="portafolio.html">Portafolio</a></li> 
+                <li><a href="formulario.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Encabezado general que contiene el control del tema y la tarjeta de presentación de Camila -->
+    <header role="banner" class="main-header">
+        <!-- Herramientas de cabecera: Botón para alternar dinámicamente entre modo claro y modo oscuro -->
+        <div class="header-tools">
+            <button id="theme-toggle" class="btn" type="button" aria-label="Cambiar a modo oscuro" aria-pressed="false">
+                <span id="theme-icon" aria-hidden="true">🌙</span>
+                <span id="theme-text">Modo Oscuro</span>
+            </button>
+        </div>
+
+        <!-- Contenedor del perfil con imagen, subtítulo, título profesional y datos principales -->
+        <div class="profile-container">
+            <img src="assets/images/foto1.jpeg" alt="Fotografía personal de Camila Alejandra Muñoz Mamani" class="profile-img">
+        
+            <div class="profile-info">
+                <p class="doc-subtitle">CURRICULUM VITAE</p>
+                <h1 class="profile-name">Camila Alejandra Muñoz Mamani</h1>
+                <p class="job-title">Ingeniera de Sistemas</p>
+            
+                <!-- Bloque de dirección semántico (<address>) para agrupar los datos directos de contacto -->
+                <address class="contact-info">
+                    <ul class="contact-list">
+                        <li class="contact-item">
+                            <span class="icon" aria-hidden="true">📍</span> La Paz, Bolivia
+                        </li>
+                        <li class="contact-item">
+                            <span class="icon" aria-hidden="true">✉️</span> 
+                            <a href="mailto:camalemunoz@email.com">camalemunoz@email.com</a>
+                        </li>
+                        <li class="contact-item">
+                            <span class="icon" aria-hidden="true">📞</span> 
+                            <a href="tel:+59170179749">+591 70179749</a>
+                        </li>
+                    </ul>
+                </address>
+            </div>
+        </div>
+    </header>
+
+    <!-- Área de contenido principal de la página (<main>) -->
+    <main id="main-content" role="main">
+        <!-- Sección destinada a la información personal detallada de Camila -->
+        <section id="acerca-de-mi" class="about-section">
+            <div class="section-header">
+                <h2>ACERCA DE MÍ</h2>
+            </div>
+     
+            <!-- Estructura de tarjeta con cuadrícula (Grid) para organizar los datos personales -->
+            <article class="card">
+                <div class="info-grid">
+                    
+                    <!-- Fila 1: Despliegue del Nombre Completo -->
+                    <div class="info-item">
+                        <div class="icon-box">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                        </div>
+                        <div class="info-content">
+                            <span class="info-label">Nombre completo</span>
+                            <span class="info-value">Camila Alejandra Muñoz Mamani</span>
+                        </div>
+                    </div>
+     
+                    <!-- Fila 2: Despliegue del Carnet de Identidad -->
+                    <div class="info-item">
+                        <div class="icon-box">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M7 7h3v3H7z"/><path d="M14 7h3"/><path d="M14 11h3"/><path d="M7 15h10"/></svg>
+                        </div>
+                        <div class="info-content">
+                            <span class="info-label">Carnet de identidad</span>
+                            <span class="info-value">12454914</span>
+                        </div>
+                    </div>
+     
+                    <!-- Fila 3: Despliegue de la Fecha de Nacimiento -->
+                    <div class="info-item">
+                        <div class="icon-box">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                        </div>
+                        <div class="info-content">
+                            <span class="info-label">Fecha de nacimiento</span>
+                            <span class="info-value">01/12/2006</span>
+                        </div>
+                    </div>
+
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <!-- Pie de página general del sitio (<footer>) con metadatos de autoría y actualización -->
+    <footer role="contentinfo">
+        <p><small>&copy; Camila Alejandra Muñoz Mamani. Todos los derechos reservados.</small></p>
+        <p><small>Desarrollado con HTML5 Semántico, CSS3 Modular y JS totalmente documentado.</small></p>
+        <p><small>Fecha de última actualización: <time datetime="2026-09-12">12 de Septiembre de 2026</time></small></p>
+    </footer>
+</body>
+</html>

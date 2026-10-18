@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Curriculum Vitae de Camila Muñoz - Ingeniera de Sistemas">
+    <meta name="author" content="Camila Muñoz">
+    <title>Curriculum Vitae - Camila Muñoz</title>
+    
+    <!-- Ruta al CSS global que centraliza los módulos de diseño y temas -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Script diferido para evitar el bloqueo del renderizado inicial del navegador -->
+    <script src="jss/main.js" defer></script>   
+</head>
+
+<body>    
+    <!-- Atajo de accesibilidad exclusivo para lectores de pantalla y navegación por teclado (Skip Link) -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+    <!-- Barra de navegación principal adaptativa con control de vista activa (aria-current) -->
+    <nav aria-label="Navegación principal" class="main-nav">
+        <div class="nav-container">
+            <!-- Botón Hamburguesa para desplegar el menú lateral en dispositivos móviles -->
+            <button class="hamburger-btn" id="hamburger-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Abrir menú de navegación">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            
+            <!-- Lista de enlaces del menú conectada con los controladores de JavaScript y estilos CSS -->
+            <ul id="primary-navigation" class="nav-menu">
+                <li><a href="index.html" class="active" aria-current="page">Inicio</a></li>
+                <li><a href="acerca_de_mi.html">Acerca de mí</a></li>
+                <li><a href="perfil_profesional.html">Perfil profesional</a></li>
+                <li><a href="formacion_academica.html">Formación Académica</a></li>
+                <li><a href="experiencia_profesional.html">Experiencia profesional</a></li>
+                <li><a href="habilidades.html">Habilidades</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="idiomas.html">Idiomas</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="portafolio.html">Portafolio</a></li> 
+                <li><a href="formulario.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Banner y encabezado principal de presentación (role="banner") -->
+    <header role="banner" class="main-header">
+        <!-- Herramientas de cabecera: Botón interactivo para alternar entre modo claro y oscuro -->
+        <div class="header-tools">
+            <button id="theme-toggle" class="btn" type="button" aria-label="Cambiar a modo oscuro" aria-pressed="false">
+                <span id="theme-icon" aria-hidden="true">🌙</span>
+                <span id="theme-text">Modo Oscuro</span>
+            </button>
+        </div>
+
+        <!-- Tarjeta de perfil principal con fotografía, títulos y bloque semántico de contacto -->
+        <div class="profile-container">
+            <img src="assets/images/foto1.jpeg" alt="Fotografía personal de Camila Alejandra Muñoz Mamani" class="profile-img">
+        
+            <div class="profile-info">
+                <p class="doc-subtitle">CURRICULUM VITAE</p>
+                <h1 class="profile-name">Camila Alejandra Muñoz Mamani</h1>
+                <p class="job-title">Ingeniera de Sistemas</p>
+            
+                <!-- Bloque de dirección semántico (<address>) para datos de contacto directo -->
+                <address class="contact-info">
+                    <ul class="contact-list">
+                        <li class="contact-item">
+                            <span class="icon" aria-hidden="true">📍</span> La Paz, Bolivia
+                        </li>
+                        <li class="contact-item">
+                            <span class="icon" aria-hidden="true">✉️</span> 
+                            <a href="mailto:camalemunoz@email.com">camalemunoz@email.com</a>
+                        </li>
+                        <li class="contact-item">
+                            <span class="icon" aria-hidden="true">📞</span> 
+                            <a href="tel:+59170179749">+591 70179749</a>
+                        </li>
+                    </ul>
+                </address>
+            </div>
+        </div>
+
+        <!-- Bloque destacado con frase profesional o cita filosófica personal -->
+        <figure class="quote-box">
+            <blockquote>
+                <p>“Apasionada por la tecnología y la innovación, con vocación para transformar problemas en soluciones mediante la Ingeniería de Sistemas.”</p>
+            </blockquote>
+            <figcaption>— <cite>Camila Muñoz</cite></figcaption>
+        </figure>
+    </header>
+
+    <!-- Contenido principal de la página de inicio (<main>) -->
+    <main id="main-content" role="main">
+
+        <!-- ==========================================================================
+             BUSCADOR DINÁMICO DE PÁGINAS Y SECCIONES
+             Filtro en tiempo real que renderiza un menú desplegable de resultados
+             ========================================================================== -->
+        <section class="search-section" aria-label="Buscador en el sitio">
+            <div class="search-container">
+                <label for="dynamic-search" class="sr-only" style="display:none;">Buscar en el sitio web</label>
+                <div class="search-input-wrapper">
+                    <input 
+                        type="text" 
+                        id="dynamic-search" 
+                        class="form-input" 
+                        placeholder="🔍 Buscar página, proyecto o sección (ej. Java, Contacto, Habilidades)..." 
+                        autocomplete="off"
+                        aria-label="Buscar en todo el sitio web"
+                    />
+                    <!-- Desplegable flotante administrado por JavaScript para inyectar coincidencias -->
+                    <ul id="search-results-list" class="search-results-dropdown" role="listbox"></ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Bienvenida e introducción al portafolio -->
+        <section id="inicio" class="welcome-section" aria-labelledby="welcome-heading">
+            <div class="section-header">
+                <h2 id="welcome-heading">BIENVENIDO A MI PORTAFOLIO WEB</h2>
+            </div>
+
+            <article class="card card-lg">
+                <p class="card-body-text">
+                    Hola, soy <strong>Camila Muñoz</strong>, estudiante de <strong>Ingeniería de Sistemas</strong>. En este sitio web encontrarás un desglose detallado de mi formación académica, experiencia práctica en desarrollo de software, proyectos destacados y habilidades técnicas.
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <!-- Pie de página general del sitio (<footer>) con derechos de autor y sello de actualización -->
+    <footer role="contentinfo">
+        <p><small>&copy; Camila Alejandra Muñoz Mamani. Todos los derechos reservados.</small></p>
+        <p><small>Desarrollado con HTML5 Semántico, CSS3 Modular y JS totalmente documentado.</small></p>
+        <p><small>Fecha de última actualización: <time datetime="2026-09-12">12 de Septiembre de 2026</time></small></p>
+    </footer>
+</body>
+</html>

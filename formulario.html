@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contacto - Curriculum Vitae de Camila Muñoz">
+    <meta name="author" content="Camila Muñoz">
+    <title>Contacto - Camila Muñoz</title>
+    
+    <!-- Enlace a la hoja de estilos principal que integra la arquitectura CSS modular -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Script diferido para la conmutación de tema claro/oscuro y las validaciones nativas en JS -->
+    <script src="jss/main.js" defer></script>
+</head>
+
+<body>    
+    <!-- Enlace de accesibilidad directo para omitir la navegación y saltar al contenido principal -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+    <!-- Barra de navegación principal que conecta con las distintas vistas de la hoja de vida -->
+    <nav aria-label="Navegación principal" class="main-nav">
+        <div class="nav-container">
+            <!-- Botón Hamburguesa para desplegar el menú de navegación en dispositivos móviles -->
+            <button class="hamburger-btn" id="hamburger-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Abrir menú de navegación">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            
+            <!-- Lista de enlaces de navegación vinculada al Script principal y CSS -->
+            <ul id="primary-navigation" class="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="acerca_de_mi.html">Acerca de mí</a></li>
+                <li><a href="perfil_profesional.html">Perfil profesional</a></li>
+                <li><a href="formacion_academica.html">Formación Académica</a></li>
+                <li><a href="experiencia_profesional.html">Experiencia profesional</a></li>
+                <li><a href="habilidades.html">Habilidades</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="idiomas.html">Idiomas</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="portafolio.html">Portafolio</a></li> 
+                <!-- Pestaña actualmente activa -->
+                <li><a href="formulario.html" class="active" aria-current="page">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Encabezado general (Banner) con el selector de tema visual y la tarjeta de presentación -->
+    <header role="banner" class="main-header">
+        <!-- Control para alternar dinámicamente entre el modo claro y modo oscuro -->
+        <div class="header-tools">
+            <button id="theme-toggle" class="btn" type="button" aria-label="Cambiar a modo oscuro" aria-pressed="false">
+                <span id="theme-icon" aria-hidden="true">🌙</span>
+                <span id="theme-text">Modo Oscuro</span>
+            </button>
+        </div>
+
+        <!-- Contenedor del perfil con imagen personal, títulos y datos directos de contacto -->
+        <div class="profile-container">
+            <img src="assets/images/foto1.jpeg" alt="Fotografía personal de Camila Alejandra Muñoz Mamani" class="profile-img">
+        
+            <div class="profile-info">
+                <p class="doc-subtitle">CURRICULUM VITAE</p>
+                <h1 class="profile-name">Camila Alejandra Muñoz Mamani</h1>
+                <p class="job-title">Ingeniera de Sistemas</p>
+            
+                <!-- Bloque de dirección semántico (<address>) con datos directos de contacto personal -->
+                <address class="contact-info">
+                    <ul class="contact-list">
+                        <li class="contact-item">
+                            <span class="icon" aria-hidden="true">📍</span> La Paz, Bolivia
+                        </li>
+                        <li class="contact-item">
+                            <span class="icon" aria-hidden="true">✉️</span> 
+                            <a href="mailto:camalemunoz@email.com">camalemunoz@email.com</a>
+                        </li>
+                        <li class="contact-item">
+                            <span class="icon" aria-hidden="true">📞</span> 
+                            <a href="tel:+59170179749">+591 70179749</a>
+                        </li>
+                    </ul>
+                </address>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido principal enfocado en el formulario de contacto interactivo (<main>) -->
+    <main id="main-content" role="main">
+        <section id="formulario" class="contact-section reveal" aria-labelledby="formulario-heading">
+            <div class="section-header">
+                <h2 id="formulario-heading" class="card-title" style="font-size: 1.8rem; margin-bottom: 24px;">FORMULARIO DE CONTACTO</h2>
+            </div>
+
+            <!-- Tarjeta contenedora del formulario de interacción -->
+            <div class="card card-xl" style="max-width: 680px; margin: 0 auto;">
+                <!-- Alerta de éxito dinámica gestionada mediante JavaScript -->
+                <div id="form-success-alert" class="success-alert" style="display: none;" role="status"></div>
+
+                <!-- Formulario interactivo con atributo novalidate para aplicar validaciones nativas por JS -->
+                <form class="contact-form" novalidate style="display: flex; flex-direction: column; gap: 20px;">
+                    <fieldset class="form-fieldset" style="border: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 18px;">
+                        <legend class="doc-subtitle" style="margin-bottom: 12px;">Datos Personales y Consulta</legend>
+
+                        <!-- Campo 1: Nombre Completo con restricción de caracteres -->
+                        <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
+                            <label for="nombre" class="info-label">Nombre Completo <span class="required" style="color: var(--accent-color);" aria-hidden="true">*</span></label>
+                            <input type="text" id="nombre" name="nombre" class="form-input btn-secondary" style="width: 100%; text-align: left; padding: 12px 16px; border-radius: var(--radius-item);" required aria-required="true" placeholder="Ej. Ana María Pérez" minlength="3" maxlength="60" autocomplete="name">
+                            <span class="error-message" id="error-nombre" aria-live="polite"></span>
+                        </div>
+
+                        <!-- Campo 2: Correo Electrónico Institucional o Personal -->
+                        <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
+                            <label for="email" class="info-label">Correo Institucional / Personal <span class="required" style="color: var(--accent-color);" aria-hidden="true">*</span></label>
+                            <input type="email" id="email" name="email" class="form-input btn-secondary" style="width: 100%; text-align: left; padding: 12px 16px; border-radius: var(--radius-item);" required aria-required="true" placeholder="estudiante@ucb.edu.bo" autocomplete="email">
+                            <span class="error-message" id="error-email" aria-live="polite"></span>
+                        </div>
+
+                        <!-- Campo 3: Teléfono móvil con patrón regex para formato celular boliviano -->
+                        <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
+                            <label for="telefono" class="info-label">Número de Teléfono / WhatsApp <span class="required" style="color: var(--accent-color);" aria-hidden="true">*</span></label>
+                            <input type="tel" id="telefono" name="telefono" class="form-input btn-secondary" style="width: 100%; text-align: left; padding: 12px 16px; border-radius: var(--radius-item);" required aria-required="true" aria-describedby="telefono-help" placeholder="+591 70000000" pattern="(\+?591\s?)?[67][0-9]{7}" autocomplete="tel">
+                            <small id="telefono-help" class="text-muted" style="font-size: 0.8rem; margin-top: 2px;">Formato: celular boliviano de 8 dígitos (ej. +591 70000000)</small>
+                            <span class="error-message" id="error-telefono" aria-live="polite"></span>
+                        </div>
+
+                        <!-- Campo 4: Motivo de Contacto -->
+                        <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
+                            <label for="motivo" class="info-label">Motivo de Contacto <span class="required" style="color: var(--accent-color);" aria-hidden="true">*</span></label>
+                            <input type="text" id="motivo" name="motivo" class="form-input btn-secondary" style="width: 100%; text-align: left; padding: 12px 16px; border-radius: var(--radius-item);" required aria-required="true" placeholder="Ej. Consulta sobre proyecto académico..." minlength="10" maxlength="150">
+                            <span class="error-message" id="error-motivo" aria-live="polite"></span>
+                        </div>
+
+                        <!-- Campo 5: Área de Texto para el Mensaje detallado -->
+                        <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
+                            <label for="mensaje" class="info-label">Mensaje <span class="required" style="color: var(--accent-color);" aria-hidden="true">*</span></label>
+                            <textarea id="mensaje" name="mensaje" rows="4" class="form-input btn-secondary" style="width: 100%; text-align: left; padding: 12px 16px; border-radius: var(--radius-item); resize: vertical;" required aria-required="true" placeholder="Escribe tu mensaje detallado aquí..." minlength="20" maxlength="500"></textarea>
+                            <span class="error-message" id="error-mensaje" aria-live="polite"></span>
+                        </div>
+
+                        <!-- Campo 6: Casilla de verificación (Checkbox) para confirmación de envío -->
+                        <div class="form-group checkbox-group" style="display: flex; flex-direction: column; gap: 4px; margin-top: 8px;">
+                            <div style="display: flex; align-items: center; gap: 10px;">
+                                <input type="checkbox" id="confirmacion" name="confirmacion" class="form-input" required aria-required="true" style="accent-color: var(--accent-color); width: 18px; height: 18px; cursor: pointer;">
+                                <label for="confirmacion" class="card-body-text" style="margin: 0; font-size: 0.9rem; cursor: pointer;">Confirmo el envío de este formulario <span class="required" style="color: var(--accent-color);" aria-hidden="true">*</span></label>
+                            </div>
+                            <span class="error-message" id="error-confirmacion" aria-live="polite"></span>
+                        </div>
+                    </fieldset>
+
+                    <!-- Acciones del formulario (Botón de Enviar y Limpiar Campos) -->
+                    <div class="form-actions" style="display: flex; gap: 14px; flex-wrap: wrap; margin-top: 10px;">
+                        <button type="submit" class="btn btn-primary" style="flex: 1; min-width: 180px;">Enviar Formulario</button>
+                        <button type="reset" class="btn btn-secondary" style="flex: 1; min-width: 140px;">Limpiar Campos</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Modal informativo nativo con elemento <dialog> para horarios de atención -->
+            <dialog class="info-dialog accordion-card" style="padding: 24px; border-radius: var(--radius-card); border: 1px solid var(--border-color); backdrop-filter: blur(16px); margin: auto;" aria-labelledby="dialog-title" aria-describedby="dialog-desc">
+                <div class="dialog-content" style="text-align: center; display: flex; flex-direction: column; align-items: center; gap: 12px;">
+                    <div class="icon-box" aria-hidden="true">ℹ️</div>
+                    <h3 id="dialog-title" class="card-title" style="margin: 0;">Horarios de Atención</h3>
+                    <p id="dialog-desc" class="card-body-text" style="margin: 0;">Puedes contactarnos de <strong>lunes a viernes de 9:00 am a 16:00 pm</strong>.</p>
+                    <form method="dialog" style="margin-top: 8px;">
+                        <button type="submit" class="btn btn-primary" aria-label="Cerrar aviso importante">Entendido / Cerrar</button>
+                    </form>
+                </div>
+            </dialog>
+        </section>
+    </main>
+
+    <!-- Pie de página general del sitio (<footer>) con metadatos de autoría y actualización -->
+    <footer role="contentinfo">
+        <p><small>&copy; Camila Alejandra Muñoz Mamani. Todos los derechos reservados.</small></p>
+        <p><small>Desarrollado con HTML5 Semántico, CSS3 Modular y JS totalmente documentado.</small></p>
+        <p><small>Fecha de última actualización: <time datetime="2026-09-12">12 de Septiembre de 2026</time></small></p>
+    </footer>
+</body>
+</html>

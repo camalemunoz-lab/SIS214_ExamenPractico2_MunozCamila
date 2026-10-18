@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración de caracteres y vista responsiva para dispositivos móviles -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Metadatos de SEO: descripción de la página y autoría -->
+    <meta name="description" content="Perfil Profesional - Curriculum Vitae de Camila Muñoz">
+    <meta name="author" content="Camila Muñoz">
+    
+    <!-- Título que se muestra en la pestaña del navegador -->
+    <title>Perfil Profesional - Camila Muñoz</title>
+    
+    <!-- Hoja de estilos principal -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Script ejecutable diferido para la funcionalidad dinámica de la página -->
+    <script src="jss/main.js" defer></script>
+</head>
+
+<body>    
+    <!-- Enlace de accesibilidad para saltar directamente al contenido con teclado -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+    <!-- Menú de navegación principal con etiquetado accesible ARIA -->
+    <nav aria-label="Navegación principal" class="main-nav">
+        <div class="nav-container">
+            <!-- Botón Hamburguesa para desplegar menú en pantallas pequeñas -->
+            <button class="hamburger-btn" id="hamburger-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Abrir menú de navegación">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            
+            <!-- Lista de enlaces de navegación vinculada al Script y CSS -->
+            <ul id="primary-navigation" class="nav-menu">
+                <li><a href="index.html" class="active" aria-current="page">Inicio</a></li>
+                <li><a href="acerca_de_mi.html">Acerca de mí</a></li>
+                <li><a href="perfil_profesional.html">Perfil profesional</a></li>
+                <li><a href="formacion_academica.html">Formación Académica</a></li>
+                <li><a href="experiencia_profesional.html">Experiencia profesional</a></li>
+                <li><a href="habilidades.html">Habilidades</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="idiomas.html">Idiomas</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="portafolio.html">Portafolio</a></li> 
+                <li><a href="formulario.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Encabezado principal del sitio (Banner de presentación) -->
+    <header role="banner" class="main-header">
+        <!-- Herramientas superiores: botón interactivo para el modo oscuro -->
+        <div class="header-tools">
+            <button id="theme-toggle" class="btn" type="button" aria-label="Cambiar a modo oscuro" aria-pressed="false">
+                <span id="theme-icon" aria-hidden="true">🌙</span>
+                <span id="theme-text">Modo Oscuro</span>
+            </button>
+        </div>
+
+        <!-- Tarjeta de perfil principal con foto y datos personales -->
+        <div class="profile-container">
+            <img src="assets/images/foto1.jpeg" alt="Fotografía personal de Camila Alejandra Muñoz Mamani" class="profile-img">
+        
+            <div class="profile-info">
+                <p class="doc-subtitle">CURRICULUM VITAE</p>
+                <h1 class="profile-name">Camila Alejandra Muñoz Mamani</h1>
+                <p class="job-title">Ingeniera de Sistemas</p>
+            
+                <!-- Sección semántica para información de contacto directo -->
+                <address class="contact-info">
+                    <ul class="contact-list">
+                        <li class="contact-item">
+                            <span class="icon" aria-hidden="true">📍</span> La Paz, Bolivia
+                        </li>
+                        <li class="contact-item">
+                            <span class="icon" aria-hidden="true">✉️</span> 
+                            <a href="mailto:camalemunoz@email.com">camalemunoz@email.com</a>
+                        </li>
+                        <li class="contact-item">
+                            <span class="icon" aria-hidden="true">📞</span> 
+                            <a href="tel:+59170179749">+591 70179749</a>
+                        </li>
+                    </ul>
+                </address>
+            </div>
+        </div>
+    </header>
+
+    <!-- Área de contenido principal de la página -->
+    <main id="main-content" role="main">
+        <!-- SECCIÓN: PERFIL PROFESIONAL -->
+        <section id="perfil-profesional" class="profile-section reveal" aria-labelledby="profile-heading">
+            <!-- Título de la sección con accesibilidad ARIA -->
+            <div class="section-header">
+                <h2 id="profile-heading" class="card-title" style="font-size: 1.8rem; margin-bottom: 20px;">PERFIL PROFESIONAL</h2>
+            </div>
+
+            <!-- Contenedor del resumen profesional del perfil estilo Hero Card -->
+            <article class="profile-hero-card">
+                <!-- Párrafos de resumen sobre formación, lenguajes y aptitudes -->
+                <p class="card-body-text" style="font-size: 1.05rem; line-height: 1.7; margin-bottom: 16px;">
+                    Estudiante de la carrera de <strong>Ingeniería de Sistemas</strong> con sólido interés en el desarrollo de software, modelado de bases de datos y la resolución de problemas lógicos mediante el uso de tecnología. Cuento con experiencia académica práctica en lenguajes como <em>Java, C++, Python y SQL</em>, además de la construcción de interfaces web accesibles utilizando HTML5 y CSS3.
+                </p>
+                <p class="card-body-text" style="font-size: 1.05rem; line-height: 1.7; margin-bottom: 24px;">
+                    Me caracterizo por mi capacidad de aprendizaje autónomo, trabajo en equipo y atención al detalle en el diseño y documentación de proyectos tecnológicos. En constante formación para aplicar soluciones eficientes e innovadoras en el ámbito profesional.
+                </p>
+
+                <!-- Tarjetas interactivas / cuadrícula con datos clave del perfil -->
+                <div class="profile-stats-grid">
+                    <!-- Elemento 1: Especialidad técnica -->
+                    <div class="profile-stat-item">
+                        <div class="profile-stat-icon">💻</div>
+                        <div class="info-content">
+                            <span class="info-label">Especialidad</span>
+                            <span class="info-value">Ingeniería de Sistemas</span>
+                        </div>
+                    </div>
+
+                    <!-- Elemento 2: Universidad / Institución educativa -->
+                    <div class="profile-stat-item">
+                        <div class="profile-stat-icon">🎓</div>
+                        <div class="info-content">
+                            <span class="info-label">Institución</span>
+                            <span class="info-value">UCB "San Pablo"</span>
+                        </div>
+                    </div>
+
+                    <!-- Elemento 3: Ubicación interactiva enlazada a Google Maps -->
+                    <a href="https://maps.app.goo.gl/hUENa5PmpbSAxa1W8" target="_blank" rel="noopener noreferrer" class="profile-stat-item" style="text-decoration: none; color: inherit; cursor: pointer;">
+                        <div class="profile-stat-icon">📍</div>
+                        <div class="info-content">
+                            <span class="info-label">Ubicación</span>
+                            <span class="info-value" style="color: var(--accent-color); text-decoration: underline;">La Paz, Bolivia</span>
+                        </div>
+                    </a>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <!-- Pie de página (Footer) con derechos de autor e información de versión -->
+    <footer role="contentinfo">
+        <p><small>&copy; Camila Alejandra Muñoz Mamani. Todos los derechos reservados.</small></p>
+        <p><small>Desarrollado con HTML5 Semántico, CSS3 Modular y JS totalmente documentado.</small></p>
+        <p><small>Fecha de última actualización: <time datetime="2026-09-12">12 de Septiembre de 2026</time></small></p>
+    </footer>
+</body>
+</html>

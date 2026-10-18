@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* ==========================================================================
+   1. RESET UNIVERSAL Y ESTILOS BASE
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family-base, 'Poppins', sans-serif);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 20px;
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ==========================================================================
+   2. ESTRUCTURA GENERAL DE SECCIONES
+   ========================================================================== */
+.about-section,
+.profile-section,
+.education-section,
+.experience-section,
+.skills-section,
+.languages-section,
+.projects-section,
+.portfolio-section,
+.contact-section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+    scroll-margin-top: 100px;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.form-fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    border: none;
+    padding: 0;
+    margin: 0 0 24px 0;
+}
+
+/* ==========================================================================
+   3. ENCABEZADOS Y TEXTOS DE SECCIÓN
+   ========================================================================== */
+.section-header h2 {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-title);
+    font-weight: 700;
+    color: var(--text-color);
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+}
+
+.section-description {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-value);
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+/* ==========================================================================
+   4. ETIQUETAS HTML NATIVAS Y COMPONENTES
+   ========================================================================== */
+.contact-info a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+figcaption {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-label);
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 4px;
+}
+
+mark {
+    background-color: var(--accent-bg);
+    color: var(--accent-color);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   5. FORMULARIOS Y CONTROLES
+   ========================================================================== */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-value);
+    padding: 10px 14px;
+    border-radius: var(--radius-item);
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px var(--accent-bg);
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--accent-color);
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   6. BARRAS DE PROGRESO NATIVAS
+   ========================================================================== */
+progress {
+    width: 100%;
+    height: 8px;
+    display: block;
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: var(--border-color);
+}
+
+progress::-webkit-progress-bar {
+    background-color: var(--border-color);
+    border-radius: 10px;
+}
+
+progress::-webkit-progress-value,
+progress::-moz-progress-bar {
+    background-color: var(--accent-color);
+    border-radius: 10px;
+}
+
+/* ==========================================================================
+   7. DIÁLOGO / MODAL BASE
+   ========================================================================== */
+.info-dialog {
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-card);
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    padding: 24px;
+    max-width: 420px;
+    box-shadow: var(--shadow-hover);
+}
+
+.info-dialog::backdrop {
+    background: var(--overlay-bg, rgba(0, 0, 0, 0.5));
+    backdrop-filter: blur(2px);
+}

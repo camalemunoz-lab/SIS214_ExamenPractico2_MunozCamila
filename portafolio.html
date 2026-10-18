@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración básica de codificación de caracteres UTF-8 para admitir acentos y caracteres especiales -->
+    <meta charset="UTF-8">
+    
+    <!-- Adaptación responsiva para asegurar una correcta visualización en móviles y tablets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Metadatos de SEO para motores de búsqueda (descripción de la página y autoría) -->
+    <meta name="description" content="Portafolio Multimedia - Curriculum Vitae de Camila Muñoz">
+    <meta name="author" content="Camila Muñoz">
+    
+    <!-- Título descriptivo que se muestra en la pestaña del navegador -->
+    <title>Portafolio - Camila Muñoz</title>
+    
+    <!-- Enlace a la hoja de estilos externa CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Carga diferida del script JS para evitar interferir con la renderización inicial del DOM -->
+    <script src="jss/main.js" defer></script>
+</head>
+
+<body>    
+    <!-- Atajo de accesibilidad por teclado para saltar directamente al contenido principal sin recorrer el menú -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+    <!-- Navegación principal accesible del sitio web -->
+    <nav aria-label="Navegación principal" class="main-nav">
+        <div class="nav-container">
+            <!-- Botón Hamburguesa para pantallas pequeñas. Incluye atributos ARIA para lectores de pantalla -->
+            <button class="hamburger-btn" id="hamburger-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Abrir menú de navegación">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            
+            <!-- Menú de navegación principal con los enlaces a las diferentes secciones del CV -->
+            <ul id="primary-navigation" class="nav-menu">
+                <li><a href="index.html" class="active" aria-current="page">Inicio</a></li>
+                <li><a href="acerca_de_mi.html">Acerca de mí</a></li>
+                <li><a href="perfil_profesional.html">Perfil profesional</a></li>
+                <li><a href="formacion_academica.html">Formación Académica</a></li>
+                <li><a href="experiencia_profesional.html">Experiencia profesional</a></li>
+                <li><a href="habilidades.html">Habilidades</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="idiomas.html">Idiomas</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="portafolio.html">Portafolio</a></li> 
+                <li><a href="formulario.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Encabezado superior con la tarjeta de identificación de la persona -->
+    <header role="banner" class="main-header">
+        <!-- Control para la alternancia de tema claro / modo oscuro -->
+        <div class="header-tools">
+            <button id="theme-toggle" class="btn" type="button" aria-label="Cambiar a modo oscuro" aria-pressed="false">
+                <span id="theme-icon" aria-hidden="true">🌙</span>
+                <span id="theme-text">Modo Oscuro</span>
+            </button>
+        </div>
+
+        <!-- Contenedor de foto de perfil e información personal -->
+        <div class="profile-container">
+            <!-- Fotografía de perfil con texto alternativo detallado -->
+            <img src="assets/images/foto1.jpeg" alt="Fotografía personal de Camila Alejandra Muñoz Mamani" class="profile-img">
+        
+            <div class="profile-info">
+                <p class="doc-subtitle">CURRICULUM VITAE</p>
+                <h1 class="profile-name">Camila Alejandra Muñoz Mamani</h1>
+                <p class="job-title">Ingeniera de Sistemas</p>
+            
+                <!-- Sección para la lista de datos de contacto semánticos -->
+                <address class="contact-info">
+                    <ul class="contact-list">
+                        <li class="contact-item">
+                            <!-- Ícono decorativo ocultado a tecnologías de asistencia mediante aria-hidden="true" -->
+                            <span class="icon" aria-hidden="true">📍</span> La Paz, Bolivia
+                        </li>
+                        <li class="contact-item">
+                            <span class="icon" aria-hidden="true">✉️</span> 
+                            <a href="mailto:camalemunoz@email.com">camalemunoz@email.com</a>
+                        </li>
+                        <li class="contact-item">
+                            <span class="icon" aria-hidden="true">📞</span> 
+                            <a href="tel:+59170179749">+591 70179749</a>
+                        </li>
+                    </ul>
+                </address>
+            </div>
+        </div>
+    </header>
+
+    <!-- Área principal de contenido que almacena los recursos del portafolio -->
+    <main id="main-content" role="main">
+        <!-- SECCIÓN 9: PORTAFOLIO MULTIMEDIA -->
+        <section id="portafolio" class="portfolio-section" aria-labelledby="portafolio-heading">
+            <div class="section-header">
+                <h2 id="portafolio-heading">PORTAFOLIO MULTIMEDIA</h2>
+            </div>
+
+            <!-- Grilla contenedora en CSS para distribuir los módulos interactivos -->
+            <div class="portfolio-grid">
+                
+                <!-- RECURSO 1: TARJETA DE IMAGEN -->
+                <article class="portfolio-card">
+                    <div class="portfolio-card-header">
+                        <!-- Ícono decorativo SVG representativo de una imagen -->
+                        <div class="media-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+                        </div>
+                        <h3>Captura: Tienda Virtual</h3>
+                    </div>
+
+                    <!-- Estructura semántica <figure> / <figcaption> para asociar la imagen con su descripción -->
+                    <figure class="media-container">
+                        <!-- Atributo loading="lazy" para optimizar el rendimiento mediante carga diferida -->
+                        <img src="./assets/images/imagenproyecto.jpeg" alt="Captura de pantalla de la interfaz de administración del proyecto Tienda Virtual en Java" loading="lazy" class="media-responsive">
+                        <figcaption>Figura 1: Módulo del administrador de la tienda virtual.</figcaption>
+                    </figure>
+                </article>
+
+                <!-- RECURSO 2: TARJETA DE AUDIO -->
+                <article class="portfolio-card">
+                    <div class="portfolio-card-header">
+                        <!-- Ícono decorativo SVG representativo de notas musicales / audio -->
+                        <div class="media-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+                        </div>
+                        <h3>Presentación en Audio</h3>
+                    </div>
+
+                    <p class="media-description">Explicación detallada sobre la arquitectura y funcionamiento del programa.</p>
+
+                    <!-- Reproductor nativo de audio en HTML5 -->
+                    <figure class="media-container">
+                        <!-- 
+                            - controls: muestra los controles por defecto del navegador (play/pausa, volumen, tiempo).
+                            - preload="metadata": carga únicamente la información básica (duración, formato) para ahorrar ancho de banda.
+                        -->
+                        <audio controls preload="metadata" class="audio-responsive" aria-label="Audio explicativo del programa en Java">
+                            <source src="./assets/audios/audioproyecto.mp3" type="audio/mpeg">
+                            <!-- Mensaje alternativo si el navegador no soporta el formato de audio -->
+                            Tu navegador no soporta la reproducción de audio nativo HTML5.
+                        </audio>
+                        <figcaption>Audio 1: Explicación de la ejecución del programa.</figcaption>
+                    </figure>
+                </article>
+
+                <!-- RECURSO 3: TARJETA DE VIDEO (ANCHO COMPLETO) -->
+                <article class="portfolio-card full-width-media">
+                    <div class="portfolio-card-header">
+                        <!-- Ícono decorativo SVG representativo de una cámara de video -->
+                        <div class="media-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 8-6 4 6 4V8z"/><rect width="14" height="12" x="2" y="6" rx="2" ry="2"/></svg>
+                        </div>
+                        <h3>Demostración en Video</h3>
+                    </div>
+
+                    <p class="media-description">Recorrido dinámico mostrando la ejecución del software en tiempo real.</p>
+
+                    <!-- Reproductor de video nativo con portada personalizada -->
+                    <figure class="media-container">
+                        <div class="video-wrapper">
+                            <!-- 
+                                - poster: define una imagen estática a mostrar antes de iniciar la reproducción del video.
+                                - preload="metadata": optimiza el consumo de datos cargando únicamente los metadatos iniciales.
+                            -->
+                            <video controls poster="./assets/images/imagenproyecto.jpeg" preload="metadata" aria-label="Video resumen de la explicación del código">
+                                <source src="./assets/videos/videoproyecto.mp4" type="video/mp4">
+                                <!-- Mensaje alternativo de fallback -->
+                                Tu navegador no admite la reproducción de video nativo en HTML5.
+                            </video>
+                        </div>
+                        <figcaption>Video 1: Demostración práctica del flujo de compra y componentes visuales.</figcaption>
+                    </figure>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página con rol informativo, derechos reservados y marcado semántico de fecha -->
+    <footer role="contentinfo">
+        <p><small>&copy; Camila Alejandra Muñoz Mamani. Todos los derechos reservados.</small></p>
+        <p><small>Desarrollado con HTML5 Semántico, CSS3 Modular y JS totalmente documentado.</small></p>
+        <p><small>Fecha de última actualización: <time datetime="2026-09-12">12 de Septiembre de 2026</time></small></p>
+    </footer>
+</body>
+</html>

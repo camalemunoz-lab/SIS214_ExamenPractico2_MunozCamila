@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Experiencia Profesional - Curriculum Vitae de Camila Muñoz">
+    <meta name="author" content="Camila Muñoz">
+    <title>Experiencia Profesional - Camila Muñoz</title>
+
+    <!-- Enlace al archivo CSS central con variables globales y estilos modulares -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Carga diferida del script para la conmutación de temas y funciones de interfaz -->
+    <script src="jss/main.js" defer></script>
+</head>
+
+<body>    
+    <!-- Enlace de salto accesible exclusivo para lectores de pantalla y navegación por teclado -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+    <!-- Menú de navegación principal con atributo aria-current en la vista activa -->
+    <nav aria-label="Navegación principal" class="main-nav">
+        <div class="nav-container">
+            <!-- Botón Hamburguesa para desplegar el menú en dispositivos móviles -->
+            <button class="hamburger-btn" id="hamburger-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Abrir menú de navegación">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            
+            <!-- Lista de enlaces de navegación vinculada al Script y CSS -->
+            <ul id="primary-navigation" class="nav-menu">
+                <li><a href="index.html" class="active" aria-current="page">Inicio</a></li>
+                <li><a href="acerca_de_mi.html">Acerca de mí</a></li>
+                <li><a href="perfil_profesional.html">Perfil profesional</a></li>
+                <li><a href="formacion_academica.html">Formación Académica</a></li>
+                <li><a href="experiencia_profesional.html">Experiencia profesional</a></li>
+                <li><a href="habilidades.html">Habilidades</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="idiomas.html">Idiomas</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="portafolio.html">Portafolio</a></li> 
+                <li><a href="formulario.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Encabezado general con información personal de Camila y selector de tema dinámico -->
+    <header role="banner" class="main-header">
+        <!-- Herramientas de cabecera: Botón de interacción JS para alternar la paleta de colores -->
+        <div class="header-tools">
+            <button id="theme-toggle" class="btn" type="button" aria-label="Cambiar a modo oscuro" aria-pressed="false">
+                <span id="theme-icon" aria-hidden="true">🌙</span>
+                <span id="theme-text">Modo Oscuro</span>
+            </button>
+        </div>
+
+        <!-- Contenedor flex para la imagen y los datos generales -->
+        <div class="profile-container">
+            <img src="assets/images/foto1.jpeg" alt="Fotografía personal de Camila Alejandra Muñoz Mamani" class="profile-img">
+        
+            <div class="profile-info">
+                <p class="doc-subtitle">CURRICULUM VITAE</p>
+                <h1 class="profile-name">Camila Alejandra Muñoz Mamani</h1>
+                <p class="job-title">Ingeniera de Sistemas</p>
+            
+                <!-- Elemento de dirección semántica (<address>) para los datos directos de contacto -->
+                <address class="contact-info">
+                    <ul class="contact-list">
+                        <li class="contact-item">
+                            <span class="icon" aria-hidden="true">📍</span> La Paz, Bolivia
+                        </li>
+                        <li class="contact-item">
+                            <span class="icon" aria-hidden="true">✉️</span> 
+                            <a href="mailto:camalemunoz@email.com">camalemunoz@email.com</a>
+                        </li>
+                        <li class="contact-item">
+                            <span class="icon" aria-hidden="true">📞</span> 
+                            <a href="tel:+59170179749">+591 70179749</a>
+                        </li>
+                    </ul>
+                </address>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección principal centrada en el historial de proyectos y desarrollo académico (<main>) -->
+    <main id="main-content" role="main">
+        <!-- Listado estructurado de proyectos clave trabajados en la universidad -->
+        <section id="experiencia-profesional" class="experience-section">
+            <div class="section-header">
+                <h2>EXPERIENCIA PROFESIONAL Y PROYECTOS</h2>
+            </div>
+
+            <!-- Disposición en cuadrícula (Grid) para las tarjetas de proyectos desarrollados -->
+            <div class="experience-grid">
+                
+                <!-- Tarjeta 1: Tercer Semestre - Sistema de Tienda Virtual Desktop (Java & GUI) -->
+                <article class="experience-card">
+                    <div class="experience-header">
+                        <div>
+                            <h3>Sistema de Tienda Virtual Desktop</h3>
+                            <p class="institution">Universidad Católica Boliviana "San Pablo" (Proyecto Académico)</p>
+                        </div>
+                        <div class="experience-date">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                            <time datetime="2026-02">Febrero 2026</time> &ndash; <time datetime="2026-06">Junio 2026</time>
+                        </div>
+                    </div>
+
+                    <div class="experience-body">
+                        <p><strong>Descripción:</strong> Diseño e implementación de una tienda virtual utilizando el paradigma de Programación Orientada a Objetos (POO).</p>
+                        
+                        <!-- Resumen de logros clave obtenidos durante el desarrollo -->
+                        <div class="achievements">
+                            <strong>Principales logros:</strong>
+                            <ul>
+                                <li>Integración exitosa de JavaFX para una interfaz de usuario fluida e interactiva.</li>
+                                <li>Implementación de persistencia de datos mediante archivos de texto.</li>
+                                <li>Estructuración semántica de clases modulares y escalables.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Etiquetas de las tecnologías aplicadas en la solución -->
+                        <div class="tech-tags">
+                            <span>Java</span>
+                            <span>JavaFX</span>
+                            <span>POO</span>
+                            <span>Archivos</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 2: Segundo Semestre - Desarrolladora C++ & Recursividad -->
+                <article class="experience-card">
+                    <div class="experience-header">
+                        <div>
+                            <h3>Desarrolladora C++ - Juego POO en Consola</h3>
+                            <p class="institution">Universidad Católica Boliviana "San Pablo" (Proyecto Académico)</p>
+                        </div>
+                        <div class="experience-date">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                            <time datetime="2025-08">Agosto 2025</time> &ndash; <time datetime="2025-11">Noviembre 2025</time>
+                        </div>
+                    </div>
+
+                    <div class="experience-body">
+                        <p><strong>Descripción:</strong> Optimización de la lógica del juego "Piedra, Papel o Tijera" desde consola, implementando control de flujo avanzado, validación estricta de entradas y modularidad.</p>
+
+                        <!-- Puntos destacados de refinamiento de software -->
+                        <div class="achievements">
+                            <strong>Principales logros:</strong>
+                            <ul>
+                                <li>Migración exitosa del paradigma imperativo al modelo orientado a objetos.</li>
+                                <li>Mejora drástica en el tiempo de respuesta del sistema.</li>
+                                <li>Manejo de ciclos de partida continuos con persistencia de puntuaciones en memoria.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Etiquetas tecnológicas -->
+                        <div class="tech-tags">
+                            <span>C++</span>
+                            <span>POO</span>
+                            <span>CLI</span>
+                            <span>Algoritmos</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 3: Primer Semestre - Prototipado en Python -->
+                <article class="experience-card">
+                    <div class="experience-header">
+                        <div>
+                            <h3>Desarrolladora Python - Algoritmo "Piedra, Papel o Tijera"</h3>
+                            <p class="institution">Universidad Católica Boliviana "San Pablo" (Proyecto Académico)</p>
+                        </div>
+                        <div class="experience-date">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                            <time datetime="2025-02">Febrero 2025</time> &ndash; <time datetime="2025-06">Junio 2025</time>
+                        </div>
+                    </div>
+
+                    <div class="experience-body">
+                        <p><strong>Descripción:</strong> Desarrollo del primer prototipo en Python definiendo condicionales, estructuras de datos simples y generación de decisiones aleatorias para la CPU.</p>
+
+                        <!-- Fundamentos técnicos adquiridos durante el proyecto -->
+                        <div class="achievements">
+                            <strong>Principales logros:</strong>
+                            <ul>
+                                <li>Dominio inicial de sintaxis básica y lógica algorítmica.</li>
+                                <li>Control y gestión de excepciones para prevenir errores con entradas inválidas.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Etiquetas tecnológicas -->
+                        <div class="tech-tags">
+                            <span>Python</span>
+                            <span>Lógica Algorítmica</span>
+                            <span>CLI</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página general del sitio (<footer>) con metadatos de autoría y actualización -->
+    <footer role="contentinfo">
+        <p><small>&copy; Camila Alejandra Muñoz Mamani. Todos los derechos reservados.</small></p>
+        <p><small>Desarrollado con HTML5 Semántico, CSS3 Modular y JS totalmente documentado.</small></p>
+        <p><small>Fecha de última actualización: <time datetime="2026-09-12">12 de Septiembre de 2026</time></small></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración del juego de caracteres para asegurar la correcta visualización de tildes y caracteres especiales en español -->
+    <meta charset="UTF-8">
+    
+    <!-- Configuración para el diseño responsivo (adaptable a dispositivos móviles) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Metadatos de descripción y autor para los motores de búsqueda (SEO) -->
+    <meta name="description" content="Idiomas - Curriculum Vitae de Camila Muñoz">
+    <meta name="author" content="Camila Muñoz">
+    
+    <!-- Título que aparece en la pestaña del navegador -->
+    <title>Idiomas - Camila Muñoz</title>
+    
+    <!-- Enlace a la hoja de estilos externa CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Script de JavaScript cargado de forma diferida (defer) para no bloquear el renderizado HTML -->
+    <script src="jss/main.js" defer></script>
+</head>
+
+<body>    
+    <!-- Atajo de accesibilidad que permite a usuarios con lector de pantalla o navegación por teclado saltar directamente al contenido principal -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+    <!-- Menú de navegación principal con atributo semántico aria-label -->
+    <nav aria-label="Navegación principal" class="main-nav">
+        <div class="nav-container">
+            <!-- Botón tipo hamburguesa para la vista móvil. Atributos ARIA indican el estado desplegable -->
+            <button class="hamburger-btn" id="hamburger-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Abrir menú de navegación">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            
+            <!-- Lista ordenada de enlaces de navegación que representan las páginas del CV -->
+            <ul id="primary-navigation" class="nav-menu">
+                <li><a href="index.html" class="active" aria-current="page">Inicio</a></li>
+                <li><a href="acerca_de_mi.html">Acerca de mí</a></li>
+                <li><a href="perfil_profesional.html">Perfil profesional</a></li>
+                <li><a href="formacion_academica.html">Formación Académica</a></li>
+                <li><a href="experiencia_profesional.html">Experiencia profesional</a></li>
+                <li><a href="habilidades.html">Habilidades</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="idiomas.html">Idiomas</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="portafolio.html">Portafolio</a></li> 
+                <li><a href="formulario.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Encabezado del documento que contiene el perfil del usuario y el conmutador de tema -->
+    <header role="banner" class="main-header">
+        <!-- Herramienta superior para cambiar entre modo claro / modo oscuro -->
+        <div class="header-tools">
+            <button id="theme-toggle" class="btn" type="button" aria-label="Cambiar a modo oscuro" aria-pressed="false">
+                <span id="theme-icon" aria-hidden="true">🌙</span>
+                <span id="theme-text">Modo Oscuro</span>
+            </button>
+        </div>
+
+        <!-- Contenedor del perfil con foto y datos identificativos -->
+        <div class="profile-container">
+            <!-- Fotografía de perfil con texto alternativo detallado para accesibilidad -->
+            <img src="assets/images/foto1.jpeg" alt="Fotografía personal de Camila Alejandra Muñoz Mamani" class="profile-img">
+        
+            <div class="profile-info">
+                <p class="doc-subtitle">CURRICULUM VITAE</p>
+                <h1 class="profile-name">Camila Alejandra Muñoz Mamani</h1>
+                <p class="job-title">Ingeniera de Sistemas</p>
+            
+                <!-- Etiqueta semántica <address> que agrupa la información de contacto -->
+                <address class="contact-info">
+                    <ul class="contact-list">
+                        <li class="contact-item">
+                            <!-- Icono decorativo oculto para lectores de pantalla con aria-hidden="true" -->
+                            <span class="icon" aria-hidden="true">📍</span> La Paz, Bolivia
+                        </li>
+                        <li class="contact-item">
+                            <span class="icon" aria-hidden="true">✉️</span> 
+                            <a href="mailto:camalemunoz@email.com">camalemunoz@email.com</a>
+                        </li>
+                        <li class="contact-item">
+                            <span class="icon" aria-hidden="true">📞</span> 
+                            <a href="tel:+59170179749">+591 70179749</a>
+                        </li>
+                    </ul>
+                </address>
+            </div>
+        </div>
+    </header>
+
+    <!-- Área de contenido principal de la página -->
+    <main id="main-content" role="main">
+        <!-- SECCIÓN 7: IDIOMAS - Sección destinada a mostrar la competencia lingüística -->
+        <section id="idiomas" class="languages-section" aria-labelledby="idiomas-heading">
+            <div class="section-header">
+                <h2 id="idiomas-heading">DOMINIO DE IDIOMAS Y COMPETENCIAS COMUNICATIVAS</h2>
+            </div>
+            <p class="section-description">A continuación se detalta el nivel de fluidez, competencias lingüísticas y estado de evaluación en los idiomas estudiados:</p>
+            
+            <!-- Tabla de datos con estructura accesible (caption, thead, tbody, tfoot) -->
+            <div class="table-container">
+                <table class="languages-table">
+                    <!-- Título descriptivo de la tabla para lectores de pantalla -->
+                    <caption>Evaluación de Competencias Lingüísticas y Dominio de Idiomas</caption>
+                    
+                    <!-- Encabezados de columna con ámbito de columna (scope="col") -->
+                    <thead>
+                        <tr>
+                            <th scope="col">Idioma</th>
+                            <th scope="col">Lectura / Escritura</th>
+                            <th scope="col">Conversación / Oral</th>
+                            <th scope="col">Progreso de Dominio</th>
+                        </tr>
+                    </thead>
+                    
+                    <!-- Cuerpos de datos de la tabla -->
+                    <tbody>
+                        <!-- Fila 1: Español -->
+                        <tr>
+                            <!-- Uso de <th scope="row"> para relacionar la fila con el nombre del idioma -->
+                            <th scope="row">Español</th>
+                            <td>Avanzado / Nativo</td>
+                            <td>Nativo</td>
+                            <td class="progress-cell">
+                                <div class="progress-info">
+                                    <span>Conversación</span>
+                                    <strong>100%</strong>
+                                </div>
+                                <!-- Etiqueta nativa <progress> con su correspondiente aria-label -->
+                                <progress value="100" max="100" aria-label="Dominio del idioma español: 100%">100%</progress>
+                            </td>
+                        </tr>
+
+                        <!-- Fila 2: Inglés -->
+                        <tr>
+                            <th scope="row">Inglés</th>
+                            <!-- Etiqueta <time> con atributo datetime estándar para fechas estructuradas -->
+                            <td>Intermedio (<time datetime="2025-11">CBA, 2025</time>)</td>
+                            <td>Básico / Conversacional</td>
+                            <td class="progress-cell">
+                                <div class="progress-info">
+                                    <span>Conversación</span>
+                                    <strong>80%</strong>
+                                </div>
+                                <progress value="80" max="100" aria-label="Dominio del idioma inglés: 80%">80%</progress>
+                            </td>
+                        </tr>
+
+                        <!-- Fila 3: Chino Mandarín -->
+                        <tr>
+                            <th scope="row">Chino Mandarín</th>
+                            <td>Básico (<time datetime="2022-02">2022</time>)</td>
+                            <td>Básico / Conversacional</td>
+                            <td class="progress-cell">
+                                <div class="progress-info">
+                                    <span>Conversación</span>
+                                    <strong>20%</strong>
+                                </div>
+                                <progress value="20" max="100" aria-label="Dominio del idioma chino mandarín: 20%">20%</progress>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                    <!-- Pie de la tabla para resumen numérico o conclusiones -->
+                    <tfoot>
+                        <tr>
+                            <th colspan="3" scope="row">Total de idiomas estudiados o en aprendizaje:</th>
+                            <td><strong>3 Idiomas (1 Nativo, 2 Lenguas Extranjeras)</strong></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página con rol informativo, derechos reservados y fecha de actualización -->
+    <footer role="contentinfo">
+        <p><small>&copy; Camila Alejandra Muñoz Mamani. Todos los derechos reservados.</small></p>
+        <p><small>Desarrollado con HTML5 Semántico, CSS3 Modular y JS totalmente documentado.</small></p>
+        <p><small>Fecha de última actualización: <time datetime="2026-09-12">12 de Septiembre de 2026</time></small></p>
+    </footer>
+</body>
+</html>

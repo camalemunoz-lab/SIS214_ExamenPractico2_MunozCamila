@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!-- Configuración para diseño responsivo en dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Proyectos - Curriculum Vitae de Camila Muñoz">
+    <meta name="author" content="Camila Muñoz">
+    <title>Proyectos - Camila Muñoz</title>
+    
+    <!-- Enlace a la hoja de estilos global CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Archivo de JavaScript principal cargado de forma diferida (defer) para evitar bloqueos de renderizado -->
+    <script src="jss/main.js" defer></script>
+</head>
+
+<body>    
+    <!-- Enlace directo al contenido principal para accesibilidad (Skip Link) y navegación por teclado -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+    <!-- Navegación Principal del sitio web -->
+    <nav aria-label="Navegación principal" class="main-nav">
+        <div class="nav-container">
+            <!-- Botón Hamburguesa para desplegar el menú en dispositivos móviles -->
+            <button class="hamburger-btn" id="hamburger-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Abrir menú de navegación">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            
+            <!-- Lista de enlaces de navegación vinculada al Script y CSS -->
+            <ul id="primary-navigation" class="nav-menu">
+                <li><a href="index.html" class="active" aria-current="page">Inicio</a></li>
+                <li><a href="acerca_de_mi.html">Acerca de mí</a></li>
+                <li><a href="perfil_profesional.html">Perfil profesional</a></li>
+                <li><a href="formacion_academica.html">Formación Académica</a></li>
+                <li><a href="experiencia_profesional.html">Experiencia profesional</a></li>
+                <li><a href="habilidades.html">Habilidades</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="idiomas.html">Idiomas</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="portafolio.html">Portafolio</a></li> 
+                <li><a href="formulario.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Encabezado de la página con información personal (role="banner") -->
+    <header role="banner" class="main-header">
+        <!-- Botón para alternar interactivamente el tema (Modo Claro / Modo Oscuro) -->
+        <div class="header-tools">
+            <button id="theme-toggle" class="btn" type="button" aria-label="Cambiar a modo oscuro" aria-pressed="false">
+                <span id="theme-icon" aria-hidden="true">🌙</span>
+                <span id="theme-text">Modo Oscuro</span>
+            </button>
+        </div>
+
+        <!-- Perfil principal: Fotografía, nombre, título profesional y datos de contacto -->
+        <div class="profile-container">
+            <img src="assets/images/foto1.jpeg" alt="Fotografía personal de Camila Alejandra Muñoz Mamani" class="profile-img">
+        
+            <div class="profile-info">
+                <p class="doc-subtitle">CURRICULUM VITAE</p>
+                <h1 class="profile-name">Camila Alejandra Muñoz Mamani</h1>
+                <p class="job-title">Ingeniera de Sistemas</p>
+            
+                <!-- Datos de contacto organizados semánticamente (<address>) -->
+                <address class="contact-info">
+                    <ul class="contact-list">
+                        <li class="contact-item">
+                            <span class="icon" aria-hidden="true">📍</span> La Paz, Bolivia
+                        </li>
+                        <li class="contact-item">
+                            <span class="icon" aria-hidden="true">✉️</span> 
+                            <a href="mailto:camalemunoz@email.com">camalemunoz@email.com</a>
+                        </li>
+                        <li class="contact-item">
+                            <span class="icon" aria-hidden="true">📞</span> 
+                            <a href="tel:+59170179749">+591 70179749</a>
+                        </li>
+                    </ul>
+                </address>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido principal de la página (<main>) -->
+    <main id="main-content" role="main">
+        <!-- SECCIÓN DE PROYECTOS DESTACADOS -->
+        <section id="proyectos" class="projects-section" aria-labelledby="proyectos-heading">
+            <div class="section-header">
+                <h2 id="proyectos-heading">PROYECTOS DESTACADOS</h2>
+            </div>
+
+            <!-- Grilla / Contenedor en cuadrícula (Grid) para las tarjetas de proyectos -->
+            <div class="projects-grid">
+
+                <!-- TARJETA PROYECTO 1: Piedra, Papel y Tijera (C++) -->
+                <article class="project-card">
+                    <div class="project-header">
+                        <h3>Piedra, Papel y Tijera</h3>
+                        <span class="project-role">Desarrollador Independiente</span>
+                    </div>
+
+                    <p class="project-description">
+                        Juego por consola donde un usuario compite contra la computadora con elecciones aleatorias, marcadores en tiempo real y modo jugador contra jugador (PvP).
+                    </p>
+
+                    <div class="project-result">
+                        <strong>Resultado obtenido:</strong>
+                        <p>Código completamente funcional estructurado con lógica eficiente para gestión de partidas.</p>
+                    </div>
+
+                    <div class="project-footer">
+                        <!-- Etiquetas de tecnologías usadas -->
+                        <div class="tech-tags">
+                            <span>C++</span>
+                            <span>CLI</span>
+                            <span>Algoritmos</span>
+                        </div>
+
+                        <!-- Enlace externo al repositorio o compilador en línea -->
+                        <a href="https://onlinegdb.com/XBp70E6il" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Ver proyecto Piedra, Papel y Tijera en enlace externo">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- TARJETA PROYECTO 2: Tienda Virtual Desktop (Java GUI) -->
+                <article class="project-card">
+                    <div class="project-header">
+                        <h3>Tienda Virtual Desktop</h3>
+                        <span class="project-role">Desarrollador Independiente</span>
+                    </div>
+
+                    <p class="project-description">
+                        Aplicación de escritorio diseñada para la gestión de productos, visualización de catálogo interactivo, administración de carrito de compras y cálculo automatizado del pedido.
+                    </p>
+
+                    <div class="project-result">
+                        <strong>Resultado obtenido:</strong>
+                        <p>Interfaz gráfica intuitiva con manejo correcto de componentes visuales, listas dinámicas y control de excepciones en el flujo de compra.</p>
+                    </div>
+
+                    <div class="project-footer">
+                        <!-- Etiquetas de tecnologías usadas -->
+                        <div class="tech-tags">
+                            <span>Java</span>
+                            <span>GUI</span>
+                            <span>POO</span>
+                        </div>
+
+                        <!-- Enlace externo al proyecto -->
+                        <a href="https://onlinegdb.com/8SQ3UU2El" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Ver proyecto Tienda Virtual Desktop en enlace externo">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- SECCIÓN DE INTEGRACIÓN REST ASÍNCRONA (GITHUB API) -->
+            <section id="proyectos-github" class="project-card animate-fade-in" style="margin-top: 3rem; padding: 2rem;">
+                <h2>Repositorios de GitHub en Tiempo Real</h2>
+                <p>Consumo asíncrono de API REST externa utilizando Fetch API, async/await y bloques try...catch.</p>
+                
+                <div id="api-status-container" style="margin-top: 1.5rem;">
+                    
+                    <!-- 1. ESTADO: CARGANDO (Loading state) -->
+                    <div id="api-loading" style="display: none; text-align: center; padding: 2rem;">
+                        <p style="color: var(--color-green2); font-weight: 600;">⏳ Cargando repositorios desde la API de GitHub...</p>
+                    </div>
+                    
+                    <!-- 2. ESTADO: ERROR (Error state con manejo de excepciones) -->
+                    <div id="api-error" style="display: none; padding: 1rem; background: rgba(255, 107, 107, 0.1); border: 1px solid #ff6b6b; border-radius: var(--radius-sm); color: #ff6b6b;">
+                        <p id="error-message" style="margin: 0; font-weight: 600;">❌ Ocurrió un error en la solicitud.</p>
+                    </div>
+                    
+                    <!-- 3. ESTADO: ÉXITO (Success state con renderizado dinámico de tarjetas) -->
+                    <div id="api-success" style="display: none;">
+                        <ul id="repos-list" style="list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem;">
+                            <!-- Los elementos de los repositorios se inyectarán dinámicamente mediante JavaScript -->
+                        </ul>
+                    </div>
+
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <!-- Pie de página general del sitio (<footer>) con metadatos de autoría y fecha de actualización -->
+    <footer role="contentinfo">
+        <p><small>&copy; Camila Alejandra Muñoz Mamani. Todos los derechos reservados.</small></p>
+        <p><small>Desarrollado con HTML5 Semántico, CSS3 Modular y JS totalmente documentado.</small></p>
+        <p><small>Fecha de última actualización: <time datetime="2026-09-12">12 de Septiembre de 2026</time></small></p>
+    </footer>
+</body>
+</html>

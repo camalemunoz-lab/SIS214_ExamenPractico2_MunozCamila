@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Habilidades Técnicas - Curriculum Vitae de Camila Muñoz">
+    <meta name="author" content="Camila Muñoz">
+    <title>Habilidades Técnicas - Camila Muñoz</title>
+    
+    <!-- Enlace a la hoja de estilos global del proyecto -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Script diferido para la conmutación de tema y comportamientos interactivos -->
+    <script src="jss/main.js" defer></script>
+</head>
+
+<body>    
+    <!-- Enlace de salto rápido para accesibilidad (permite ir directo al contenido principal con teclado) -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+    <!-- Navegación principal del sitio web -->
+    <nav aria-label="Navegación principal" class="main-nav">
+        <div class="nav-container">
+            <!-- Botón Hamburguesa para dispositivos móviles -->
+            <button class="hamburger-btn" id="hamburger-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Abrir menú de navegación">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            
+            <!-- Lista de enlaces de navegación del sitio -->
+            <ul id="primary-navigation" class="nav-menu">
+                <li><a href="index.html" class="active" aria-current="page">Inicio</a></li>
+                <li><a href="acerca_de_mi.html">Acerca de mí</a></li>
+                <li><a href="perfil_profesional.html">Perfil profesional</a></li>
+                <li><a href="formacion_academica.html">Formación Académica</a></li>
+                <li><a href="experiencia_profesional.html">Experiencia profesional</a></li>
+                <li><a href="habilidades.html">Habilidades</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="idiomas.html">Idiomas</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="portafolio.html">Portafolio</a></li> 
+                <li><a href="formulario.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Encabezado del documento (Banner principal con información de perfil y controles) -->
+    <header role="banner" class="main-header">
+        <!-- Herramientas del encabezado (Ej: Botón de cambio de tema / modo oscuro) -->
+        <div class="header-tools">
+            <button id="theme-toggle" class="btn" type="button" aria-label="Cambiar a modo oscuro" aria-pressed="false">
+                <span id="theme-icon" aria-hidden="true">🌙</span>
+                <span id="theme-text">Modo Oscuro</span>
+            </button>
+        </div>
+
+        <!-- Contenedor de la información personal / tarjeta de presentación -->
+        <div class="profile-container">
+            <img src="assets/images/foto1.jpeg" alt="Fotografía personal de Camila Alejandra Muñoz Mamani" class="profile-img">
+        
+            <div class="profile-info">
+                <p class="doc-subtitle">CURRICULUM VITAE</p>
+                <h1 class="profile-name">Camila Alejandra Muñoz Mamani</h1>
+                <p class="job-title">Ingeniera de Sistemas</p>
+            
+                <!-- Información de contacto y ubicación -->
+                <address class="contact-info">
+                    <ul class="contact-list">
+                        <li class="contact-item">
+                            <span class="icon" aria-hidden="true">📍</span> La Paz, Bolivia
+                        </li>
+                        <li class="contact-item">
+                            <span class="icon" aria-hidden="true">✉️</span> 
+                            <a href="mailto:camalemunoz@email.com">camalemunoz@email.com</a>
+                        </li>
+                        <li class="contact-item">
+                            <span class="icon" aria-hidden="true">📞</span> 
+                            <a href="tel:+59170179749">+591 70179749</a>
+                        </li>
+                    </ul>
+                </address>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido principal de la página -->
+    <main id="main-content" role="main">
+        <!-- Sección de Habilidades Técnicas y Profesionales -->
+        <section id="habilidades" class="skills-section reveal" aria-labelledby="habilidades-heading">
+            <div class="section-header">
+                <h2 id="habilidades-heading" class="card-title" style="font-size: 1.8rem; margin-bottom: 24px;">HABILIDADES TÉCNICAS Y PROFESIONALES</h2>
+            </div>
+
+            <!-- Cuadrícula (Grid) contenedora de las tarjetas de categorías -->
+            <div class="skills-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;">
+                
+                <!-- CATEGORÍA 1: Lenguajes y Tecnologías -->
+                <article class="accordion-card">
+                    <details open>
+                        <summary>
+                            <div class="summary-content">
+                                <div class="icon-box" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                                </div>
+                                <strong>Lenguajes y Tecnologías</strong>
+                            </div>
+                            <svg class="chevron" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+                        </summary>
+
+                        <div class="details-body">
+                            <div class="tech-tags" style="display: flex; flex-wrap: wrap; gap: 10px; padding-top: 16px;">
+                                <span class="badge">Java</span>
+                                <span class="badge">C++</span>
+                                <span class="badge">Python</span>
+                                <span class="badge">HTML5 / CSS3</span>
+                                <span class="badge">SQL / PostgreSQL</span>
+                            </div>
+                        </div>
+                    </details>
+                </article>
+
+                <!-- CATEGORÍA 2: Herramientas de Desarrollo -->
+                <article class="accordion-card">
+                    <details>
+                        <summary>
+                            <div class="summary-content">
+                                <div class="icon-box" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                                </div>
+                                <strong>Herramientas de Desarrollo</strong>
+                            </div>
+                            <svg class="chevron" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+                        </summary>
+
+                        <div class="details-body">
+                            <ul style="list-style: none; padding: 16px 0 0 0; margin: 0; display: flex; flex-direction: column; gap: 10px;">
+                                <li class="card-body-text" style="display: flex; align-items: center; justify-content: space-between;">
+                                    <strong>JavaFX</strong>
+                                    <span class="badge" style="font-size: 0.75rem;">Desarrollo UI</span>
+                                </li>
+                                <li class="card-body-text" style="display: flex; align-items: center; justify-content: space-between;">
+                                    <strong>Git & GitHub</strong>
+                                    <span class="badge" style="font-size: 0.75rem;">Control de Versiones</span>
+                                </li>
+                                <li class="card-body-text" style="display: flex; align-items: center; justify-content: space-between;">
+                                    <strong>Apache NetBeans / VS Code</strong>
+                                    <span class="badge" style="font-size: 0.75rem;">IDEs</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </details>
+                </article>
+
+                <!-- CATEGORÍA 3: Habilidades Profesionales (Soft Skills / Aptitudes) -->
+                <article class="accordion-card">
+                    <details>
+                        <summary>
+                            <div class="summary-content">
+                                <div class="icon-box" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                </div>
+                                <strong>Habilidades Profesionales</strong>
+                            </div>
+                            <svg class="chevron" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+                        </summary>
+
+                        <div class="details-body">
+                            <ul style="list-style: none; padding: 16px 0 0 0; margin: 0; display: flex; flex-direction: column; gap: 10px;">
+                                <li class="card-body-text" style="padding-left: 20px; position: relative;">
+                                    <span style="position: absolute; left: 0; color: var(--accent-color); font-weight: bold;">✓</span>
+                                    Resolución de problemas algorítmicos y pensamiento lógico.
+                                </li>
+                                <li class="card-body-text" style="padding-left: 20px; position: relative;">
+                                    <span style="position: absolute; left: 0; color: var(--accent-color); font-weight: bold;">✓</span>
+                                    Modelado y gestión de bases de datos relacionales.
+                                </li>
+                                <li class="card-body-text" style="padding-left: 20px; position: relative;">
+                                    <span style="position: absolute; left: 0; color: var(--accent-color); font-weight: bold;">✓</span>
+                                    Trabajo en equipo, comunicación efectiva y aprendizaje autónomo.
+                                </li>
+                            </ul>
+                        </div>
+                    </details>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página (Footer) con información de derechos y actualización -->
+    <footer role="contentinfo">
+        <p><small>&copy; Camila Alejandra Muñoz Mamani. Todos los derechos reservados.</small></p>
+        <p><small>Desarrollado con HTML5 Semántico, CSS3 Modular y JS totalmente documentado.</small></p>
+        <p><small>Fecha de última actualización: <time datetime="2026-09-12">12 de Septiembre de 2026</time></small></p>
+    </footer>
+</body>
+</html>

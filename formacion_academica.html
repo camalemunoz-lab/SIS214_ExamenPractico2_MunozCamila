@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formación Académica - Curriculum Vitae de Camila Muñoz">
+    <meta name="author" content="Camila Muñoz">
+    <title>Formación Académica - Camila Muñoz</title>
+    
+    <!-- Enlace a la hoja de estilos global con variables CSS de diseño -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Script diferido para la funcionalidad de conmutación de tema claro/oscuro -->
+    <script src="jss/main.js" defer></script>
+</head>
+
+<body>    
+    <!-- Atajo de accesibilidad para saltar directo al contenido principal -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+    <!-- Navegación principal del sitio web con estado activo para esta sección -->
+    <nav aria-label="Navegación principal" class="main-nav">
+        <div class="nav-container">
+            <!-- Botón Hamburguesa -->
+            <button class="hamburger-btn" id="hamburger-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Abrir menú de navegación">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            
+            <!-- Lista de enlaces vinculada al Script y CSS -->
+            <ul id="primary-navigation" class="nav-menu">
+                <li><a href="index.html" class="active" aria-current="page">Inicio</a></li>
+                <li><a href="acerca_de_mi.html">Acerca de mí</a></li>
+                <li><a href="perfil_profesional.html">Perfil profesional</a></li>
+                <li><a href="formacion_academica.html">Formación Académica</a></li>
+                <li><a href="experiencia_profesional.html">Experiencia profesional</a></li>
+                <li><a href="habilidades.html">Habilidades</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="idiomas.html">Idiomas</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="portafolio.html">Portafolio</a></li> 
+                <li><a href="formulario.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Encabezado global (Banner) con el tema toggler y la info del perfil -->
+    <header role="banner" class="main-header">
+        <!-- Control de usuario para alternar a tema oscuro/claro -->
+        <div class="header-tools">
+            <button id="theme-toggle" class="btn" type="button" aria-label="Cambiar a modo oscuro" aria-pressed="false">
+                <span id="theme-icon" aria-hidden="true">🌙</span>
+                <span id="theme-text">Modo Oscuro</span>
+            </button>
+        </div>
+
+        <!-- Tarjeta del perfil personal en el encabezado -->
+        <div class="profile-container">
+            <img src="assets/images/foto1.jpeg" alt="Fotografía personal de Camila Alejandra Muñoz Mamani" class="profile-img">
+        
+            <div class="profile-info">
+                <p class="doc-subtitle">CURRICULUM VITAE</p>
+                <h1 class="profile-name">Camila Alejandra Muñoz Mamani</h1>
+                <p class="job-title">Ingeniera de Sistemas</p>
+            
+                <!-- Bloque de direcciones y datos directos de contacto personal -->
+                <address class="contact-info">
+                    <ul class="contact-list">
+                        <li class="contact-item">
+                            <span class="icon" aria-hidden="true">📍</span> La Paz, Bolivia
+                        </li>
+                        <li class="contact-item">
+                            <span class="icon" aria-hidden="true">✉️</span> 
+                            <a href="mailto:camalemunoz@email.com">camalemunoz@email.com</a>
+                        </li>
+                        <li class="contact-item">
+                            <span class="icon" aria-hidden="true">📞</span> 
+                            <a href="tel:+59170179749">+591 70179749</a>
+                        </li>
+                    </ul>
+                </address>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección principal del documento enfocada en la formación académica -->
+    <main id="main-content" role="main">
+        <!-- Sección contenedora con aria-labelledby vinculada al título principal -->
+        <section id="formacion-academica" class="education-section reveal" aria-labelledby="formacion-heading">
+    <div class="section-header">
+        <h2 id="formacion-heading" class="card-title" style="font-size: 1.8rem; margin-bottom: 24px;">FORMACIÓN ACADÉMICA</h2>
+    </div>
+
+    <!-- Malla en cuadrícula limpia sin líneas ni puntos -->
+    <div class="education-grid">
+        
+        <!-- Hito 1: Estudios de Nivel Superior (Universidad) -->
+        <article class="education-card">
+            <div class="education-header">
+                <div>
+                    <h3 class="education-title">Ingeniería de Sistemas</h3>
+                    <p class="education-institution">Universidad Católica Boliviana "San Pablo"</p>
+                </div>
+                <span class="education-badge">En curso</span>
+            </div>
+
+            <div class="education-content" style="margin-top: 16px;">
+                <!-- Fechas con marcado W3C sin puntos -->
+                <div class="badge-date">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/>
+                        <line x1="16" x2="16" y1="2" y2="6"/>
+                        <line x1="8" x2="8" y1="2" y2="6"/>
+                        <line x1="3" x2="21" y1="10" y2="10"/>
+                    </svg>
+                    <time datetime="2025">2025</time> &ndash; Presente
+                </div>
+            </div>
+        </article>
+
+        <!-- Hito 2: Estudios de Nivel Secundario (Colegio) -->
+        <article class="education-card">
+            <div class="education-header">
+                <div>
+                    <h3 class="education-title">Bachiller en Humanidades</h3>
+                    <p class="education-institution">Colegio Inglés Católico</p>
+                </div>
+                <span class="education-badge" style="background: var(--card-hover-bg); color: var(--text-muted);">Concluido</span>
+            </div>
+
+            <div class="education-content" style="margin-top: 16px;">
+                <!-- Rango de años de estudio sin puntos -->
+                <div class="badge-date">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/>
+                        <line x1="16" x2="16" y1="2" y2="6"/>
+                        <line x1="8" x2="8" y1="2" y2="6"/>
+                        <line x1="3" x2="21" y1="10" y2="10"/>
+                    </svg>
+                    <time datetime="2006">2006</time> &ndash; <time datetime="2024">2024</time>
+                </div>
+            </div>
+        </article>
+
+    </div>
+</section>
+    </main>
+    <footer role="contentinfo">
+        <p><small>&copy; Camila Alejandra Muñoz Mamani. Todos los derechos reservados.</small></p>
+        <p><small>Desarrollado con HTML5 Semántico, CSS3 Modular y JS totalmente documentado.</small></p>
+        <p><small>Fecha de última actualización: <time datetime="2026-09-12">12 de Septiembre de 2026</time></small></p>
+    </footer>
+</body>
+</html>
